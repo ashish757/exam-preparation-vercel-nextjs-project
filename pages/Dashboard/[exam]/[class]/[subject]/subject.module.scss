@@ -1,0 +1,12 @@
+@import '../../../../../styles/variable';
+@import '../../../../../styles/media';
+
+.subject {
+    background: $silverGradient;
+}
+
+@include media(1200px) {
+    .subject {
+        padding: 40px 10px;
+    }
+}

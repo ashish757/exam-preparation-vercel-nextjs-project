@@ -1,0 +1,81 @@
+@import "../../../styles/media";
+
+.question {
+  transition: transform 0.5s ease;
+  min-width: fit-content;
+  padding: 30px 0px;
+  background-color: #ffffff78;
+  scroll-snap-align: start;
+}
+
+.center {
+  margin: 7px 0px 0px 0px;
+}
+.options div:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.options div {
+  border-top: 1px solid #ccc;
+  transition: 0.1s ease-in-out;
+  padding: 11px 40px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  .perCentage{
+    display: none;
+  }
+  .perCentage.active{
+    display: block;
+  }
+  &:hover {
+    cursor: pointer;
+    background: #ffffff5e;
+  }
+}
+.top {
+  padding: 10px 10px 25px 30px;
+  position: relative;
+  .title {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+}
+
+
+@include lg-mobile {
+  .question:first-child.questionActive {
+    min-width: 94% !important;
+    margin-left: 7px !important;
+  }
+  .question:last-child {
+    min-width: fit-content !important;
+  }
+  .question {
+    margin-right: -7px;
+  }
+  .questionActive {
+    min-width: 92%;
+    margin: 0px 7px 0px 14px;
+  }
+  .options div {
+    padding: 11px 30px;
+  }
+  .top {
+    padding: 10px 10px 0px 10px;
+    .title {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+}
+@include md-mobile {
+  .options div {
+    padding: 11px 10px;
+  }
+}
+.optionCorrect {
+  background-color: #06e46e !important;
+}
+.optionIncorrect {
+  background-color: #e40649 !important;
+}

@@ -1,0 +1,24 @@
+@import "../../../styles/media";
+.features {
+    background: linear-gradient(17deg, #f7e9d6, #1e847f);
+    padding-bottom: 3rem;
+}
+
+@include lg-mobile {
+    .features {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@include md-mobile {
+    .features {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 190px;
+    grid-gap: 30px;
+}

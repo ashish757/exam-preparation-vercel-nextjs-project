@@ -1,0 +1,12 @@
+@import '../../../../../../styles/variable';
+@import '../../../../../../styles/media';
+
+.chapter {
+    background: $silverGradient;
+}
+
+@include media(1200px) {
+    .chapter {
+        padding: 40px 10px;
+    }
+}

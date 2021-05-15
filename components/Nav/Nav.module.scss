@@ -1,0 +1,156 @@
+@import "../../styles/media";
+@import "../../styles/variable";
+
+.nav {
+  height: $navHeight;
+  width: 100%;
+  background-color: #273592;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0px 6rem;
+  z-index: 999;
+}
+.center {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 50px;
+}
+.header {
+  display: none;
+}
+.navLinks {
+  display: flex;
+  list-style-type: none;
+}
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 8px 15px;
+  margin-right: 8px;
+  transition: 0.1s ease-in-out;
+  border-radius: 3px;
+  min-width: max-content;
+  svg {
+    transform: translateY(-2px);
+  }
+  &:hover {
+    cursor: pointer;
+    background: #ffffff55;
+  }
+}
+
+.end {
+  display: flex;
+}
+
+.ButtonGroup {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 11px 15px -9px #0e164e;
+  button {
+    box-shadow: -1px 0px 8px #05a25d;
+    color: #fff;
+    background-color: #06d87c;
+    border: none;
+    outline: none;
+    padding: .5rem .7rem;
+    font-size: 1rem;
+  }
+}
+
+@include media(800px) {
+  .nav {
+    padding: 0px 5px 0px 19px;
+  }
+  .center {
+    margin-right: 20px;
+  }
+}
+.branding {
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: Tahoma;
+  letter-spacing: 1.9px;
+  span {
+    color: #00e959;
+  }
+}
+.start {
+  display: flex;
+  align-items: center;
+}
+.menuToggler {
+  display: none;
+  margin-left: 12px;
+  button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  svg {
+    color: #fff;
+  }
+}
+
+@include lg-mobile {
+  .nav {
+    padding-left: 3px;
+  }
+  .start {
+    flex-grow: 1;
+  }
+  .menuToggler {
+    display: block;
+    margin-right: 10px;
+    button {
+      margin: 0;
+    }
+    svg {
+      font-size: 1.9rem;
+    }
+  }
+  .center {
+    // width: 0%;
+    // transition: all 0.5s cubic-bezier(0.04, 0.7, 0.21, 1.38);
+    transform: translateX(-100%);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    height: 100vh;
+    background-color: rgb(0, 1, 59);
+    display: block;
+  }
+  .navLinks {
+    display: block;
+  }
+  .navLink {
+    margin: 3px 0px;
+    padding: 8px 0px;
+    padding-left: 20px;
+    cursor: pointer;
+    svg {
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: #ffffff48;
+    }
+  }
+  .center .header {
+    display: flex;
+    align-items: center;
+    padding-top: 11px;
+  }
+  .mobNav {
+    transform: translateX(0);
+    width: 65%;
+  }
+}

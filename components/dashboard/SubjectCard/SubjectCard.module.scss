@@ -1,0 +1,73 @@
+@import '../../../styles/media';
+@import '../../../styles/variable';
+.card {
+    background: $subjectCardGradient;
+    padding: 1rem;
+    padding-right: 35px;
+    border-radius: 7px;
+    box-shadow: 1px 2px 13px 0px rgba(0, 0, 0, .15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #1c047d;
+    position: relative;
+    margin: 0px auto 25px;
+    max-width: max-content;
+}
+.info {
+    min-width: 210px;
+    display: flex;
+    align-items: center;
+    font-size: 1.19rem;
+    font-family: Tahoma;
+    svg {
+        padding: 10px;
+        margin-right: 14px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
+    
+.link {
+    background-color: rgb(255 255 255);
+    border-radius: 20px;
+    padding: 0.3rem;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 6px;
+
+    svg:nth-child(2) {
+        margin-left: -15px;
+    } 
+}
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    > div:nth-child(1) {
+        border: none;
+    }
+    > div {
+        text-align: center;
+        padding: 5px 10px;
+        min-width: max-content;
+        border-left: 2px solid #424242;
+    }
+}
+
+
+@include lg-mobile {
+    .card {
+        flex-direction: column;
+    }
+}
+
+
+
+
+

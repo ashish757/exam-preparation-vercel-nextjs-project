@@ -1,0 +1,40 @@
+.card {
+  background-color: aliceblue;
+  padding: 10px 19px;
+  display: flex;
+  flex-direction: column;
+  background: #ac33ca;
+  position: relative;
+  overflow: hidden;
+  box-shadow: -4px -3px 30px -4px #518478;
+  border-radius: 11px;
+
+  &::after {
+    top: 32px;
+    position: absolute;
+    content: "";
+    height: 200px;
+    right: -35px;
+    width: 200px;
+    border-radius: 43px;
+    background: #fcfcfc1a;
+    transform: rotate(-37deg);
+  }
+}
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding: 10px 15px 10px 0px;
+  svg {
+    font-size: 2.5rem;
+  }
+}
+.title {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  font-family: "segoe ui";
+  font-weight: 500;
+}

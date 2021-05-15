@@ -1,0 +1,26 @@
+@mixin xl-mobile {
+    @media (max-width: 700px ) {
+        @content;
+    }
+}
+@mixin lg-mobile {
+    @media (max-width: 600px ) {
+        @content;
+    }
+}
+
+@mixin md-mobile {
+    @media (max-width: 500px ) {
+        @content;  
+    }
+}
+@mixin sm-mobile {
+    @media (max-width: 350px ) {
+        @content;
+    }
+}
+@mixin media ($size) {
+    @media (max-width: #{$size} ) {
+        @content;
+    }
+}

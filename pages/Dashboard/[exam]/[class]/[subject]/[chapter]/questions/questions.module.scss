@@ -1,0 +1,64 @@
+@import "../../../../../../../styles/variable";
+@import "../../../../../../../styles/media";
+
+.questionsContainer {
+  background: $silverGradient;
+}
+.questions {
+  position: relative;
+  max-width: min-content;
+  margin: 0px auto;
+}
+.sliderContainer {
+  overflow: hidden;
+  // scroll-snap-type: x mandatory;
+  // overscroll-behavior-x: contain;
+  box-shadow: 0px 0px 16px 0px #6e7b8c96;
+}
+.slider {
+  display: flex;
+  transition: 0.5s ease;
+}
+
+.next,
+.prev {
+  cursor: pointer;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  outline: none;
+  right: 0px;
+  svg {
+    fill: #4082e4;
+    height: 40px;
+  }
+}
+.prev {
+  left: 0px;
+}
+.footer {
+  text-align: right;
+  padding: 30px 30px;
+  text-align: center;
+  .solution,
+  .report {
+    cursor: pointer;
+    padding: 10px 19px;
+    background-color: #ffffffa6;
+    &:hover {
+      background-color: #fffffff1;
+    }
+  }
+  .solution {
+    margin-right: 19px;
+  }
+}
+
+@include lg-mobile {
+  .next,
+  .prev {
+  display: none;
+  }
+}

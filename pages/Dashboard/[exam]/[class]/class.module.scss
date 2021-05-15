@@ -1,0 +1,67 @@
+@import "../../../../styles/media";
+@import "../../../../styles/variable";
+
+.class {
+  padding: 30px 130px;
+  background: $silverGradient;
+}
+
+.toggleLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    letter-spacing: 1.3px;
+    padding: 11px 25px;
+    background: #b8c2d47d;
+    border-radius: 4px;
+  }
+  button:last-child {
+    margin-left: 15px;
+  }
+}
+
+.quickLinkCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 13px;
+  overflow-x: scroll;
+}
+.quickLinkCards::-webkit-scrollbar {
+  display: none;
+}
+
+.subjectCards {
+  padding: 30px 0px;
+}
+.activeClass {
+  background: #fd7c6c !important;
+}
+@include media(1000px) {
+  .class {
+    padding: 30px 50px;
+  }
+}
+@include xl-mobile {
+  .class {
+    padding: 30px 15px;
+  }
+}
+@include lg-mobile {
+  .quickLinkCards {
+    justify-content: flex-start;
+  }
+}
+@include md-mobile {
+  .class {
+    padding: 30px 0px;
+  }
+  .subjectCards {
+    padding: 30px 10px;
+  }
+}

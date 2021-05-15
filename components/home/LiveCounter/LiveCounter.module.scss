@@ -1,0 +1,22 @@
+.liveCounter {
+    background: linear-gradient(45deg, #f7ead6, #f5e8d5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 30px;
+    padding-bottom: 50px;
+    padding-top: 0px;
+    place-content: center;
+}
+.card {
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 1px 1px 27px -6px #d4c3a9fa;
+    .count {
+        font-size: 3.5rem;
+    }
+    .title {
+        font-size: 1.5rem;
+        color: rgb(105, 105, 105);
+    }
+}

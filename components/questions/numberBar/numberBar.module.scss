@@ -1,0 +1,27 @@
+@import "../../../styles/media";
+
+.questionNumberBar {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  padding: 10px 20px;
+  max-width: min-content;
+  margin: 0px auto;
+  overflow-x: scroll;
+  display: flex;
+}
+.questionNumberBar::-webkit-scrollbar {
+  display: none;
+}
+.questionNumberBar {
+  button {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    background: none;
+    cursor: pointer;
+    &.active {
+      background-color: #ffffffa6;
+    }
+  }
+}

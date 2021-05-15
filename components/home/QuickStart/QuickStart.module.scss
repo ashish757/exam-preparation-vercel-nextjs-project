@@ -1,0 +1,115 @@
+@import "../../../styles/media";
+.quickStart {
+  background: linear-gradient(17deg, #f7ead6, #f7e9d6, #84b3a8);
+  text-align: center;
+
+  > h1 {
+    font-size: 3rem;
+  }
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-16px);
+  svg {
+    height: 110px;
+    width: 110px;
+  }
+}
+.examType {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.neet,
+.jee {
+  display: flex;
+  flex-direction: column;
+}
+
+.neetCards,
+.jeeCards {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 30px;
+}
+
+@include media(1040px) {
+  .quickStart {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: linear-gradient(59deg, #f5e8d5, #f4e8d5, #d0d6c5);
+  }
+  .title {
+    svg {
+      height: 90px;
+      width: 90px;
+    }
+  }
+}
+
+@include lg-mobile {
+  .quickStart {
+    padding: 30px 10px;
+    > h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .neetCards,
+  .jeeCards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  }
+  .title {
+    svg {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}
+
+@include md-mobile {
+  .examType {
+    grid-gap: 15px;
+  }
+  .title {
+    svg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+@include sm-mobile {
+  .neetCards,
+  .jeeCards {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+  }
+}
+
+.card {
+  background: #f7e9d6;
+  border-radius: 6px;
+  box-shadow: 8px 8px 9px 0px #efddc3, -9px -6px 9px 0px #fdf2e2;
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardButton {
+  background: #e60251; 
+  border: none;
+  outline: none;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  color:  #fff;
+  border-radius: 4px;
+  letter-spacing: 1.3px;
+}
+@include md-mobile {
+  .card h3 {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,23 @@
+.activeSubjectButton {
+    background-color: #c579e7 !important;
+}
+.subjectToggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        border: none;
+        outline: none;
+        font-size: .9rem;
+        padding: 11px 15px;
+        min-width: 110px;
+        margin-right: 10px;
+        letter-spacing: 1px;
+        background-color: #ffffff54;
+        text-transform: uppercase;
+        border-radius: 4px;
+    } 
+    button:last-child {
+       margin-right: 0px;
+    }
+}
